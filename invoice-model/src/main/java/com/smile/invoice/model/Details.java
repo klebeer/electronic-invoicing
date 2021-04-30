@@ -10,11 +10,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"detalle"})
+@XmlType(name = "detalles", propOrder = {"detail"})
 @Data
-public class Detalles {
-    @XmlElement(required = true)
-    private List<Detalle> detalle = new ArrayList<>();
+public class Details {
+
+    @XmlElement(required = true, name = "detalle")
+    private List<Detail> detail = new ArrayList<>();
 
 
 }

@@ -13,9 +13,9 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {"fechaEmision", "dirEstablecimiento", "contribuyenteEspecial", "obligadoContabilidad", "tipoIdentificacionComprador", "guiaRemision", "razonSocialComprador", "identificacionComprador", "direccionComprador", "totalSinImpuestos", "totalSubsidio", "totalDescuento", "totalConImpuestos", "compensaciones", "propina", "importeTotal", "moneda", "pagos"})
 @Data
-public class InfoFactura {
+public class InvoiceInfo {
 
-    @XmlElement(required = true)
+    @XmlElement(required = true, name = "fechaEmision")
     private String fechaEmision;
     @XmlElement(required = true)
     private String dirEstablecimiento;

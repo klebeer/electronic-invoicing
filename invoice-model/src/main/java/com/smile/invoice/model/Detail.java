@@ -13,7 +13,8 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {"codigoPrincipal", "codigoAuxiliar", "descripcion", "cantidad", "precioUnitario", "precioSinSubsidio", "descuento", "precioTotalSinImpuesto", "detallesAdicionales", "impuestos"})
 @Data
-public class Detalle {
+public class Detail {
+
     @XmlElement(required = true)
     private String codigoPrincipal;
     private String codigoAuxiliar;
