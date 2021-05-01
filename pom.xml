@@ -30,6 +30,9 @@
         <MITyCLibXADES.version>1.1.7</MITyCLibXADES.version>
         <guava.version>30.1.1-jre</guava.version>
         <feign.version>9.6.0</feign.version>
+        <sonar.projectKey>klebeer_electronic-invoicing</sonar.projectKey>
+        <sonar.organization>klebeer</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
 
