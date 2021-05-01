@@ -21,5 +21,5 @@ public class TotalImpuesto {
     private BigDecimal tarifa;
     @XmlElement(required = true)
     private BigDecimal valor;
-    
+
 }

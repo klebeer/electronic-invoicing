@@ -27,12 +27,17 @@
         <junit-jupiter-engine.version>5.6.2</junit-jupiter-engine.version>
         <jakarta.xml.bind-api.version>2.3.3</jakarta.xml.bind-api.version>
         <logback-classic.version>1.2.3</logback-classic.version>
+        <MITyCLibXADES.version>1.1.7</MITyCLibXADES.version>
+        <guava.version>30.1.1-jre</guava.version>
+        <feign.version>9.6.0</feign.version>
     </properties>
 
 
     <modules>
         <module>invoice-model</module>
         <module>invoice-xml</module>
+        <module>digital-signature</module>
+        <module>sri-integration</module>
     </modules>
 
     <dependencyManagement>
@@ -85,6 +90,59 @@
                 <artifactId>logback-classic</artifactId>
                 <version>${logback-classic.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>es.mityc.jumbo.adsi</groupId>
+                <artifactId>MITyCLibXADES</artifactId>
+                <version>${MITyCLibXADES.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>es.mityc.jumbo.adsi</groupId>
+                <artifactId>MITyCLibAPI</artifactId>
+                <version>${MITyCLibXADES.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-okhttp</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-slf4j</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-impl.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+
+        <repository>
+            <id>XADES</id>
+            <url>http://dev.fit-bank.com/nexus/content/groups/public-snapshots/</url>
+        </repository>
+
+        <repository>
+            <id>guillermo</id>
+            <name>guillermo-repo</name>
+            <url>http://maven.petalslink.com/repo</url>
+        </repository>
+
+
+    </repositories>
 </project>
